@@ -18,7 +18,7 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
     'Lorem ipsum',
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-    'Lorem ipsum, dolor sit a met consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ];
 
@@ -34,7 +34,7 @@ for (let i = 0; i < items.length; i++){
 
     // new image template
     const singleImageDiv = `
-    <div class="single-image active">
+    <div class="single-image">
 
         <img src="${thisPath}" alt=""> 
 
@@ -57,10 +57,14 @@ for (let i = 0; i < items.length; i++){
     thumbnails.innerHTML += singleThumbDiv;
 }
 
+// get .active class by default
+let defaultActive = 0;
 
+const allImages = document.getElementsByClassName('single-image');
+const allThumbs = document.getElementsByClassName('single-thumb');
 
-
-
+allImages [defaultActive].classList.add('active');
+allThumbs [defaultActive].classList.add('active');
 
 
 
