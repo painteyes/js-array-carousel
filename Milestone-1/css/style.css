@@ -19,6 +19,7 @@
     display: flex;
 }
 
+/* Images container */
 .images-container{
     width: 80%;
     height: 100%;
@@ -47,6 +48,7 @@
     color: white;
 }
 
+/* Thumbnails */
 .thumbnails{
     width: 20%;
     height: 100%;
@@ -66,7 +68,6 @@
     height: 100%;
     object-fit: cover;
 }
-
 
 /* Arrows */
 .arrow{
