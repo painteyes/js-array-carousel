@@ -66,6 +66,30 @@ const allThumbs = document.getElementsByClassName('single-thumb');
 allImages [defaultActive].classList.add('active');
 allThumbs [defaultActive].classList.add('active');
 
+// change .active class on click
+const upperImage = document.querySelector('.arrow-up');
+const lowerImage = document.querySelector('.arrow-down');
 
 
+upperImage.addEventListener('click', function(){
+
+    allImages [defaultActive].classList.remove('active')
+    allThumbs [defaultActive].classList.remove('active');
+
+    defaultActive--;
+
+    allImages [defaultActive].classList.add('active')
+    allThumbs [defaultActive].classList.add('active');
+}); 
+
+lowerImage.addEventListener('click', function(){
+
+    allImages [defaultActive].classList.remove('active')
+    allThumbs [defaultActive].classList.remove('active');
+
+    defaultActive++;
+
+    allImages [defaultActive].classList.add('active')
+    allThumbs [defaultActive].classList.add('active');
+}); 
 
